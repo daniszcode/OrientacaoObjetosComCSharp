@@ -12,6 +12,5 @@ namespace OrientacaoObjetosComCSharp
         public string cpf;
         public string email;
         public string telefone;
-
     }
 }
