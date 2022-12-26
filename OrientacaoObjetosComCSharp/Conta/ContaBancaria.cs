@@ -26,8 +26,7 @@ namespace OrientacaoObjetosComCSharp.Conta
         }
         private string conta;
         public string Conta { get; set; }
-        public string Titular { get; set; }
-
+   
         private double saldo;
         public double Saldo
         {
@@ -76,11 +75,10 @@ namespace OrientacaoObjetosComCSharp.Conta
             }
         }
         //constructor com parametros
-        public ContaBancaria(int numero_agencia,  string conta, string titular)
+        public ContaBancaria(int numero_agencia,  string conta, Titular cadastroCliente)
         {
             this.Numero_agencia = numero_agencia;
             this.Conta = conta;
-            this.Titular = titular;
             this.Saldo = saldo;
             this.chavePix = chavePix;
             this.cadastroCliente = cadastroCliente;

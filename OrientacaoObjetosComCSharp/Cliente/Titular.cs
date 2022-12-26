@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 namespace OrientacaoObjetosComCSharp.Cliente
 {
     internal class Titular
-    {
-        public int id;
-        public string nome;
-        public double renda;
+    {   
+
+        public int id { get; private set; }
+        
+        public string nome { get; set; }
+        private double renda;
+        public double Renda { get; set; }
         public string profissao;
         public bool is_standard;
         public bool is_premium;
@@ -69,6 +72,16 @@ namespace OrientacaoObjetosComCSharp.Cliente
                 is_premium = false;
             }
         }
+   
+    public Titular(string nome, double Renda, string profissao)
+    {
+            this.nome = nome;
+            this.Renda = Renda;
+            this.profissao = profissao;
     }
+    
+    }
+
+
 
 }
