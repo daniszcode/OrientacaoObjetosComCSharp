@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -27,7 +28,7 @@ namespace OrientacaoObjetosComCSharp.Conta
         private string conta;
         public string Conta { get; set; }
    
-        private double saldo;
+        protected double saldo;
         public double Saldo
         {
             get { return this.saldo; }
@@ -74,6 +75,15 @@ namespace OrientacaoObjetosComCSharp.Conta
 
             }
         }
+
+        public double setPix(double value, ContaBancaria destino)
+        {
+            this.saldo -= value;
+            destino.saldo += value;
+            Console.WriteLine($"O titular da conta {this.Conta} com a chave Pix: {this.chavePix.Cpf} transferiu o valor {value} para o titular da conta {destino.Conta} de chave Pix: {destino.chavePix.Email}");
+            return value;
+        }
+
         //constructor com parametros
         public ContaBancaria(int numero_agencia,  string conta, Titular cadastroCliente)
         {

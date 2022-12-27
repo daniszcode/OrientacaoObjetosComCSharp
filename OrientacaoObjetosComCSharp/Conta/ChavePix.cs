@@ -1,11 +1,14 @@
-﻿using System;
+﻿using OrientacaoObjetosComCSharp.Conta;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrientacaoObjetosComCSharp
+namespace OrientacaoObjetosComCSharp.Conta
 {
     internal class ChavePix
     {
@@ -17,10 +20,5 @@ namespace OrientacaoObjetosComCSharp
 
         private string telefone;
         public string Telefone { get; set; }
-
-
-        //TODO 
-        //cadastrar chave pix
-        //receber e transferir dinheiro
     }
 }
